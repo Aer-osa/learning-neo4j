@@ -1,0 +1,6 @@
+CREATE (learner:Learner {name:'Aer'}),
+       (hello:Greeting {message:'Nice to meet you!'}),
+       (learner)-[r:SAYS]->(hello)
+
+MATCH (learner:Learner)-[rel]-(greeting:Greeting)
+RETURN *
